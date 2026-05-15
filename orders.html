@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастер-Учет - Заказы</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-tools"></i> Мастер-Учет</h1>
+        <nav>
+            <a href="index.html"><i class="fas fa-chart-line"></i> Главная</a>
+            <a href="clients.html"><i class="fas fa-users"></i> Клиенты</a>
+            <a href="orders.html" class="active"><i class="fas fa-box"></i> Заказы</a>
+            <a href="debtors.html"><i class="fas fa-exclamation-triangle"></i> Должники</a>
+        </nav>
+    </header>
+    <main id="appContent">
+        <!-- Динамический контент -->
+    </main>
+
+    <!-- Модальное окно для заказа -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <h3 id="orderModalTitle"><i class="fas fa-plus-circle"></i> Создать заказ</h3>
+            <select id="orderClientId"><option value="">Выберите клиента</option></select>
+            <input type="text" id="orderDesc" placeholder="Описание (ремонт iPhone...)" required>
+            <select id="orderStatus">
+                <option value="Новый">Новый</option>
+                <option value="В работе">В работе</option>
+                <option value="Выдан">Выдан</option>
+            </select>
+            <input type="number" id="orderCost" placeholder="Стоимость (₽)" required>
+            <input type="number" id="orderDebt" placeholder="Остаток долга (₽)">
+            <div class="modal-actions">
+                <button class="btn-outline" id="closeOrderModal"><i class="fas fa-times"></i> Отмена</button>
+                <button class="btn-success" id="saveOrderBtn"><i class="fas fa-save"></i> Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

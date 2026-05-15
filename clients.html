@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастер-Учет - Клиенты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-tools"></i> Мастер-Учет</h1>
+        <nav>
+            <a href="index.html"><i class="fas fa-chart-line"></i> Главная</a>
+            <a href="clients.html" class="active"><i class="fas fa-users"></i> Клиенты</a>
+            <a href="orders.html"><i class="fas fa-box"></i> Заказы</a>
+            <a href="debtors.html"><i class="fas fa-exclamation-triangle"></i> Должники</a>
+        </nav>
+    </header>
+    <main id="appContent">
+        <!-- Динамический контент -->
+    </main>
+
+    <!-- Модальное окно для клиента -->
+    <div id="clientModal" class="modal">
+        <div class="modal-content">
+            <h3 id="clientModalTitle"><i class="fas fa-user-plus"></i> Новый клиент</h3>
+            <input type="text" id="clientName" placeholder="Имя" required>
+            <input type="text" id="clientPhone" placeholder="Телефон">
+            <textarea id="clientComment" placeholder="Комментарий" rows="2"></textarea>
+            <div class="modal-actions">
+                <button class="btn-outline" id="closeClientModal"><i class="fas fa-times"></i> Отмена</button>
+                <button class="btn-success" id="saveClientBtn"><i class="fas fa-save"></i> Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
